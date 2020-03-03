@@ -1,0 +1,53 @@
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+.site {
+	//background: #fafafa;
+}
+
+.site-content, .site-header, .site-footer, .top-menu, .copy-wrap {
+	@include center-block;
+	@include breakpoint(bg) {
+		width: 1320px;
+	}
+	@include breakpoint(lg) {
+		width: 1170px;
+	}
+	@include breakpoint(md) {
+		width: 1010px;
+	}
+	@include breakpoint(sm) {
+		width: 758px;
+	}
+	@include breakpoint(xs) {
+		width: 100%;
+	}
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+@import "captions";
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+@import "galleries";

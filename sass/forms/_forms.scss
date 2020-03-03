@@ -1,0 +1,66 @@
+@import "buttons";
+
+@import "fields";
+
+.headerspace {
+  color: #404040;
+}
+
+form.headerspace a {
+  color: $color__link;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    //background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(255,255,255,0);
+}
+
+/* Modal Content/Box */
+.modal-content {
+  left: 66%;
+  margin: 0;
+  position: fixed;
+  top: 40px;
+  background: #fff;
+  z-index: 99999;
+  padding: 10px;
+  @include block-border;
+}
+
+div.modal-content > a {
+  color: $color__link;
+}
+
+/* The Close Button */
+.close {
+    color: #000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form#sendpress_signup.sendpress-signup > div#form-wrap > p {
+  margin: 0;
+  padding: 0;
+}
+
+input#submit.sendpress-submit {
+  margin-top: 5px;
+}

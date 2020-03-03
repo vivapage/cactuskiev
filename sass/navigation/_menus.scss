@@ -1,0 +1,215 @@
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			//top: 100%;
+			left: -999em;
+			z-index: 99999;
+			background: rgba(255,255,255,.9);
+			padding: 10px;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+				padding: 5px 0;
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+									}
+			}
+
+			a {
+				width: 200px;
+				@include font-size(.95) ;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		float: left;
+		position: relative;
+		padding: 5px 10px 10px 0;
+
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+		font-family: 'Comfortaa', cursive;
+		@include font-size (1.1);
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+}
+
+#primary-menu li .fa {
+	font-size: 24px;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}
+.social-links {
+	width: 40%;
+	float: left;
+}
+.social-links ul, .menu-links ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+	display: block;
+}
+.menu-links ul {
+	@include breakpoint(xs) {
+		@include font-size(.6);
+		margin-top: 8px;
+	}
+}
+
+.social-links li {
+	float: left;
+	position: relative;
+	color: #E8F5E9;
+	margin: 0 5px 0 0;
+}
+.social-links a{
+	color: #E8F5E9;
+	text-decoration: none;
+	@include font-size (1.2);
+}
+.top-links {
+	width: 60%;
+	float: right;
+}
+.login-form {
+	float: right;
+	margin: 4px 5px;
+}
+div.login-form span{
+	@include breakpoint(xs) {
+		display: none;
+	}
+}
+
+.menu-links li {
+	float: right;
+	position: relative;
+	color: #E8F5E9;
+	//margin: 3px 5px 0 0;
+}
+
+.menu-links a {
+	border-right: 1px solid #fff;
+	padding-right: 10px;
+	margin-right: 10px;
+}
+
+.menu-links a, .login-form a, .login-form {
+	color: #E8F5E9;
+	text-decoration: none;
+
+	@include font-size (.8);
+	@include breakpoint(xs) {
+		margin-top: 8px;
+		@include font-size (.6);
+	}
+}
+
+@media screen and (max-width: 600px) {
+
+#toggle {
+float: right;
+position: fixed;
+}
+
+.nav-menu li {
+border-bottom:1px solid $color__background-hr;
+padding:5px 10px;
+width:100%;
+}
+
+.nav-menu li:hover {
+//background:#CCC;
+}
+
+.nav-menu li a {
+//color:#FFF;
+text-decoration:none;
+width:90%;
+@include font-size(.9);
+
+}
+.main-navigation ul ul {
+	margin-left: 20px;
+}
+.main-navigation ul ul a {
+	@include font-size(.8);
+}
+}

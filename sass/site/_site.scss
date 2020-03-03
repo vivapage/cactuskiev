@@ -1,0 +1,209 @@
+// @import "../layout/content-sidebar";
+// @import "../layout/sidebar-content";
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+@import "primary/posts-and-pages";
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+@import "primary/comments";
+
+
+article {
+  clear: both;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+#front-primary {
+  float: left;
+  padding: 0;
+
+  @include breakpoint(bg) {
+    width: 320px;
+  }
+  @include breakpoint(lg) {
+    width: 320px;
+  }
+  @include breakpoint(md) {
+    width: 320px;
+  }
+  @include breakpoint(sm) {
+    width: 320px;
+  }
+  @include breakpoint(xs) {
+    width: 94%;
+    float: none;
+    margin: auto;
+    @include font-size(.9);
+  }
+}
+
+#primary {
+  float: left;
+  padding: 0;
+
+  @include breakpoint(bg) {
+    width: 690px;
+  }
+  @include breakpoint(lg) {
+    width: 690px;
+  }
+  @include breakpoint(md) {
+    width: 690px;
+  }
+  @include breakpoint(sm) {
+    width: 690px;
+  }
+  @include breakpoint(xs) {
+    width: 94%;
+    @include font-size(.9);
+    float: none;
+    margin: auto;
+  }
+}
+
+#front-primary-sidebar, #front-secondary-sidebar, #primary-sidebar, #secondary-sidebar {
+  width: 100%;
+  margin:  0 0 10px 10px;
+  float: left;
+}
+#shop-primary-sidebar {
+  width: 100%;
+  margin:  0 10px 10px 0;
+  float: left;
+  @include breakpoint(xs) {
+    margin: auto;
+    float: none;
+  }
+}
+#front-primary-sidebar {
+  @include breakpoint(bg) {
+    width: 680px;
+  }
+  @include breakpoint(lg) {
+    width: 680px;
+  }
+  @include breakpoint(md) {
+    width: 680px;
+  }
+  @include breakpoint(sm) {
+    width: 158px;
+  }
+  @include breakpoint(xs) {
+    width: 94%;
+    @include font-size(.9);
+  }
+}
+
+.dokan-w8 {
+  @include breakpoint(bg) {
+    width: 680px !important;
+  }
+  @include breakpoint(lg) {
+    width: 680px !important;
+  }
+  @include breakpoint(md) {
+    width: 680px !important;
+  }
+  @include breakpoint(sm) {
+    width: 158px !important;
+  }
+  @include breakpoint(xs) {
+    width: 94% !important;
+    @include font-size(.9);
+  }
+}
+
+#primary-sidebar, #shop-primary-sidebar {
+  @include breakpoint(bg) {
+    width: 310px;
+  }
+  @include breakpoint(lg) {
+    width: 310px;
+  }
+  @include breakpoint(md) {
+    width: 310px;
+  }
+  @include breakpoint(sm) {
+    width: 158px;
+  }
+  @include breakpoint(xs) {
+    width: 94%;
+    @include font-size(.9);
+  }
+}
+#dokan-secondary {
+    @include breakpoint(bg) {
+      width: 310px !important;
+    }
+    @include breakpoint(lg) {
+      width: 310px !important;
+    }
+    @include breakpoint(md) {
+      width: 310px !important;
+    }
+    @include breakpoint(sm) {
+      width: 158px !important;
+    }
+    @include breakpoint(xs) {
+      width: 94% !important;
+      @include font-size(.9);
+    }
+  }
+
+#front-secondary-sidebar {
+  @include breakpoint(bg) {
+    width: 300px;
+    position: sticky;
+    top: 10px;
+  }
+  @include breakpoint(lg) {
+    width: 150px;
+  }
+  @include breakpoint(md) {
+    width: 100%;
+  }
+  @include breakpoint(sm) {
+    width: 100%;
+  }
+  @include breakpoint(xs) {
+    width: 94%;
+    @include font-size(.9);
+  }
+}
+
+
+#secondary-sidebar {
+  @include breakpoint(bg) {
+    width: 300px;
+  }
+  @include breakpoint(lg) {
+    width: 150px;
+  }
+  @include breakpoint(md) {
+    width: 94%;
+  }
+  @include breakpoint(sm) {
+    width: 94%;
+  }
+  @include breakpoint(xs) {
+    width: 94%;
+    @include font-size(.9);
+  }
+}
+
+#front-secondary-sidebar.widget-area .widget {
+  @include breakpoint(md) {
+    width: 24%;
+    float: left;
+    margin-left: 1%;
+  }
+  @include breakpoint(sm) {
+    width: 24%;
+    float: left;
+    margin-left: 1%;
+  }
+}

@@ -1,0 +1,157 @@
+/**
+ * Single Product
+ */
+.single-product {
+	div.product {
+		@include clearfix;
+		position: relative;
+
+		.woocommerce-product-gallery {
+			position: relative;
+
+			.woocommerce-product-gallery__trigger {
+				position: absolute;
+				top: 1em;
+				right: 1em;
+				display: block;
+				z-index: 99;
+			}
+
+			.flex-viewport {
+				margin-bottom: 1em;
+			}
+
+			.flex-control-thumbs {
+				@include clearfix;
+				margin: 0;
+				padding: 0;
+
+				li {
+					list-style: none;
+					cursor: pointer;
+					float: left;
+
+					img {
+						opacity: .5;
+
+						&.flex-active {
+							opacity: 1;
+						}
+					}
+
+					&:hover {
+						img {
+							opacity: 1;
+						}
+					}
+				}
+			}
+
+			@for $i from 2 through 5 {
+				&.woocommerce-product-gallery--columns-#{$i} {
+					.flex-control-thumbs {
+						li {
+							@include column-width($i);
+
+							&:nth-child(#{$i}n) {
+								margin-right: 0;
+							}
+
+							&:nth-child(#{$i}n+1) {
+								clear: both;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.stock {
+	&:empty:before {
+		display: none;
+	}
+
+	&.in-stock {
+		color: $woocommerce__color-success;
+	}
+
+	&.out-of-stock {
+		color: $woocommerce__color-error;
+	}
+}
+
+.outofstock:before{
+    content: url(/images/sold_out.png);
+    position: absolute !important;
+    top: 0;
+    left: 0 !important;
+    text-align: center;
+    z-index: 9999999;
+}
+
+ul.products li.product {
+	@include breakpoint(xs) {
+	list-style: none;
+	position: relative;
+	margin: 10px 10px 2em 10px;
+	/* margin: auto; */
+	width: 43%;
+	float: left;
+	//padding: 5px;
+}
+}
+
+ul.products li.product .wc-new-badge {
+	font-size:.75em;
+	text-transform: uppercase;
+	color: white;
+	background:#F00;
+	padding:.2em .5em;
+	display: inline-block;
+	font-weight: 700;
+	border-radius:2px;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+}
+
+ul.wc-tabs a {
+	@include breakpoint(xs) {
+	@include font-size(.65);
+}
+}
+@include breakpoint(xs) {
+	div.product div.images.woocommerce-product-gallery {
+		position: relative;
+		width: 100%;
+		float: left;
+	}
+	div.product div.summary {
+		margin-bottom: 2em;
+		//float: right;
+		width: 100%;
+		margin-top: 0;
+	}
+}
+
+.product_meta {
+	margin: 10px 0;
+}
+
+.product_meta span a {
+	text-decoration: none;
+	@include font-size(.8);
+}
+
+li.product a {
+	text-decoration: none;
+}
+
+span.details {
+	@include font-size(.8);
+	margin: 0 0 5px 0;
+	display: block;
+}

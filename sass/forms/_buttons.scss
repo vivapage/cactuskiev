@@ -1,0 +1,132 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: $color__border-button;
+	border-radius: 3px;
+	background: $color__background-button;
+	color: rgba(255, 255, 255, .8);
+	@include font-size(0.75);
+	line-height: 1;
+	padding: .6em 1em .6em;
+
+	&:hover {
+		border-color: $color__border-button-hover;
+	}
+
+	&:active,
+	&:focus {
+		border-color: $color__border-button-focus;
+	}
+}
+a.button {
+	color: rgba(255, 255, 255, .8) !important;
+}
+.button {
+	display: inline-block;
+	//float: right;
+	-webkit-font-smoothing: antialiased;
+	position: relative;
+	padding: .6em 1em .6em;
+	padding-right: 4.7em;
+	background: $color__background-button;
+	border: none;
+	color: rgba(255, 255, 255, 0.8) ;
+	text-decoration: none;
+	transition: .2s;
+	@include font-size(.8);
+	line-height: 1em;
+	border-radius: 4px;
+	&:before,
+	&:after {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		padding-top: inherit;
+		padding-bottom: inherit;
+		width: 1.8em;
+		content: "\00a0";
+		font-family: 'FontAwesome', sans-serif;
+		font-size: 1.2em;
+		text-align: center;
+		transition: .2s;
+		transform-origin: 50% 60%;
+	}
+	&:after {
+		content: "\F054";
+	}
+	&:before {
+		background: rgba(0, 0, 0, 0.1);
+	}
+	&:hover {
+		background: darken($color__background-button, 10%);
+		color: rgba(255, 255, 255, 0.8);
+	}
+	&:active,
+	&:focus {
+		background: darken($color__background-button, 30%);
+		outline: none;
+	}
+	&:hover:after {
+		-webkit-animation: bounceright .3s alternate ease infinite;
+		animation: bounceright .3s alternate ease infinite;
+	}
+}
+
+.add_to_cart_button, .single_add_to_cart_button {
+	background: $color__background-button;
+	&:hover {
+		background: darken($color__background-button, 10%);
+	}
+	&:active,
+	&:focus {
+		background: darken($color__background-button, 30%);
+	}
+	&:after {
+		content: "\f07a";
+	}
+	&:hover:after {
+		-webkit-animation: bouncetop .3s alternate ease infinite;
+		animation: bouncetop .3s alternate ease infinite;
+	}
+}
+
+.arrow {
+	background: $color__background-button;
+	&:hover {
+		background: darken($color__background-button, 10%);
+	}
+	&:active,
+	&:focus {
+		background: darken($color__background-button, 30%);
+	}
+	&:after {
+		content: "\F054";
+	}
+	&:hover:after {
+		-webkit-animation: bounceright .3s alternate ease infinite;
+		animation: bounceright .3s alternate ease infinite;
+	}
+}
+
+@-webkit-keyframes bounceright {
+	from { -webkit-transform: translateX(0); }
+	to   { -webkit-transform: translateX(3px); }
+}
+
+@keyframes bounceright {
+	from { transform: translateX(0); }
+	to   { transform: translateX(3px); }
+}
+
+@keyframes bouncetop {
+	from { transform: translateY(-1px); }
+	to   { transform: translateY(1px); }
+}
+
+@-webkit-keyframes bouncetop {
+	from { -webkit-transform: translateX(-1px); }
+	to   { -webkit-transform: translateX(1px); }
+}
